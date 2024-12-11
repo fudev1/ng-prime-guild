@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NavLink } from '../navigation.model';
 import { MAIN_NAV_LINKS } from '../navigation-links';
+import { NavigationService } from '../services/navigation.service';
 
 @Component({
   selector: 'app-nav-links',
@@ -11,11 +12,12 @@ import { MAIN_NAV_LINKS } from '../navigation-links';
     RouterLinkActive,
   ],
   templateUrl: './nav-links.component.html',
-  styleUrl: './nav-links.component.scss'
+  styleUrl: './nav-links.component.scss',
+  providers: [NavigationService]
 })
 export class NavLinksComponent {
   @Input() isMobile: boolean = false;
 
-  links: NavLink[] = MAIN_NAV_LINKS;
+  constructor(public navigationService: NavigationService) { }
   
 }

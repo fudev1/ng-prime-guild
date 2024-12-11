@@ -2,7 +2,7 @@
 
 @if (!isMobile) {
     <ul  class="hidden space-x-6 text-sm font-medium lg:flex nav-content">
-        @for (link of links; track link.path) {
+        @for (link of navigationService.links(); track link.path) {
             <li><a [routerLink]="link.path" routerLinkActive="active" [routerLinkActiveOptions]="{exact: link.path === '/'}" class="nav-link">{{ link.label }}</a></li>
         }
     </ul>
@@ -10,7 +10,7 @@
 
 @if (isMobile) {
     <ul class="flex flex-col space-y-4 lg:hidden">
-        @for (link of links; track link.path) {
+        @for (link of navigationService.links(); track link.path) {
             <li><a [routerLink]="link.path" routerLinkActive="active" [routerLinkActiveOptions]="{exact: link.path === '/'}" class="block px-4 py-2 text-white hover:bg-gray-700">{{ link.label }}</a></li>
         }
     </ul>

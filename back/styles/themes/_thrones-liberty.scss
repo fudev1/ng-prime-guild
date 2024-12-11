@@ -1,0 +1,9 @@
+@use '../variables/colors' as *;
+@use '../variables/fonts' as *;
+@use '../variables/spacing' as *;
+
+$thrones-liberty-theme: (
+  'colors': $thrones-liberty-colors,
+  'fonts': $font-families,
+  'spacing': $spacing,
+);

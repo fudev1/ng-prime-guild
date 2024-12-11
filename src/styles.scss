@@ -1,16 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: #2a2747;
+  }
+
+  .p-button {
+    &:focus {
+      box-shadow: none;
+    }
+    padding: 0.5rem 1rem;
+  }
+}
+
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
-
-@layer reset, primeng;
 
 @tailwind components;
 @tailwind utilities;
 
-@layer reset {
-    button{
-      &:focus{
-        box-shadow: none;
-      }
+// Themes
+.theme-default {
+  .p-button {
+    background: #00e571 !important;
+    border-color: #00e571 !important;
+    color: #000000 !important;
+    
+    &:hover {
+      background: darken(#00e571, 10%) !important;
+      border-color: darken(#00e571, 10%) !important;
     }
+  }
+}
+
+.theme-new-world {
+  .p-button {
+    background: #ff7700 !important;
+    border-color: #ff7700 !important;
+    color: #ffffff !important;
+    
+    &:hover {
+      background: darken(#ff7700, 10%) !important;
+      border-color: darken(#ff7700, 10%) !important;
+    }
+  }
+}
+
+.theme-thrones {
+  .p-button {
+    background: #9c27b0 !important;
+    border-color: #9c27b0 !important;
+    color: #ffffff !important;
+    
+    &:hover {
+      background: darken(#9c27b0, 10%) !important;
+      border-color: darken(#9c27b0, 10%) !important;
+    }
+  }
+}
+
+// Navigation
+.gm-header {
+  @apply fixed top-5 left-10 right-10 backdrop-blur-lg;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-content {
+  @apply rounded-full p-5;
+}
+
+.nav-link {
+  @apply font-sans text-sm uppercase transition-all ease-in cursor-pointer px-4 py-2 rounded-xl text-white;
 }

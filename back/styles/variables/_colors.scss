@@ -1,0 +1,26 @@
+// Base Colors
+$colors: (
+  'black': #000000,
+  'white': #ffffff,
+  'green': #00e571,
+  'purple': #8b00ff,
+);
+
+// Theme Specific Colors
+$default-colors: (
+  'primary': map-get($colors, 'green'),
+  'background': map-get($colors, 'black'),
+  'text': map-get($colors, 'white'),
+);
+
+$new-world-colors: (
+  'primary': #ff7700,
+  'background': #1a1a1a,
+  'text': map-get($colors, 'white'),
+);
+
+$thrones-liberty-colors: (
+  'primary': #9c27b0,
+  'background': #120f1a,
+  'text': map-get($colors, 'white'),
+);

@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-new-world',
+  selector: 'app-main-layout',
   standalone: true,
   imports: [
     RouterOutlet
   ],
-  templateUrl: './new-world.component.html',
-  styleUrl: './new-world.component.scss'
+  templateUrl: './main-layout.component.html',
+  styleUrl: './main-layout.component.scss'
 })
-export class NewWorldComponent {
+export class MainLayoutComponent {
 
 }

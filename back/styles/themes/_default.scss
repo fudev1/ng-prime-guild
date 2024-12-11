@@ -1,0 +1,9 @@
+@use '../variables/colors' as *;
+@use '../variables/fonts' as *;
+@use '../variables/spacing' as *;
+
+$default-theme: (
+  'colors': $default-colors,
+  'fonts': $font-families,
+  'spacing': $spacing,
+);

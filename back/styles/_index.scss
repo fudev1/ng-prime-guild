@@ -1,0 +1,19 @@
+@use 'themes/default' as *;
+@use 'themes/new-world' as *;
+@use 'themes/thrones-liberty' as *;
+
+:root {
+  @each $theme, $values in (
+    'default': $default-theme,
+    'new-world': $new-world-theme,
+    'thrones-liberty': $thrones-liberty-theme
+  ) {
+    .theme-#{$theme} {
+      @each $category, $vars in $values {
+        @each $key, $value in $vars {
+          --#{$category}-#{$key}: #{$value};
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@use '../variables/colors' as *;
+@use '../variables/fonts' as *;
+@use '../variables/spacing' as *;
+
+$new-world-theme: (
+  'colors': $new-world-colors,
+  'fonts': $font-families,
+  'spacing': $spacing,
+);

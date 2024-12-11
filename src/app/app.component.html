@@ -1,14 +1,8 @@
-<app-navbar></app-navbar>
+<div [class]="themeService.themeClass()" class="min-h-screen">
+    <app-navbar></app-navbar>
 
-<main>
-    <router-outlet></router-outlet>
-</main>
-
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-</h1>
-
-<div class="flex card justify-content-center">
-    <p-button label="Submit" />
+    <main class="pt-24">
+        <router-outlet></router-outlet>
+    </main>
 </div>
 
