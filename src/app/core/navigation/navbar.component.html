@@ -1,0 +1,28 @@
+<header class="rounded-full gm-header">
+	<nav class="container flex items-center justify-between px-6 py-4 mx-auto lg:px-12">
+    	<div class="flex items-center space-x-8">
+			<!-- LOGO -->
+			<app-logo> </app-logo>
+			<!-- NAV LINKS -->
+			<app-nav-links [isMobile]="false"></app-nav-links>
+
+      	</div>
+
+      	<app-login-button></app-login-button>
+      
+      	<button class="lg:hidden" (click)="toggleMobileMenu()">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+			</svg>
+      	</button>
+
+    </nav>
+    
+    <!-- MOBILE DROPDOWN MENU -->
+    @if (isMobileMenuOpen) {
+    <div class="mobile-menu">
+        <app-nav-links [isMobile]="true"></app-nav-links>
+    </div>
+    }
+    
+</header>
